@@ -1,0 +1,326 @@
+/* pt-serif-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-serif-v18-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/pt-serif-v18-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/pt-serif-v18-latin-regular.woff2") format("woff2"), url("../fonts/pt-serif-v18-latin-regular.woff") format("woff"), url("../fonts/pt-serif-v18-latin-regular.ttf") format("truetype"), url("../fonts/pt-serif-v18-latin-regular.svg#PTSerif") format("svg"); /* Legacy iOS */
+}
+/* pt-serif-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "PT Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/pt-serif-v18-latin-italic.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/pt-serif-v18-latin-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/pt-serif-v18-latin-italic.woff2") format("woff2"), url("../fonts/pt-serif-v18-latin-italic.woff") format("woff"), url("../fonts/pt-serif-v18-latin-italic.ttf") format("truetype"), url("../fonts/pt-serif-v18-latin-italic.svg#PTSerif") format("svg"); /* Legacy iOS */
+}
+/* pt-serif-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-serif-v18-latin-700.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/pt-serif-v18-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/pt-serif-v18-latin-700.woff2") format("woff2"), url("../fonts/pt-serif-v18-latin-700.woff") format("woff"), url("../fonts/pt-serif-v18-latin-700.ttf") format("truetype"), url("../fonts/pt-serif-v18-latin-700.svg#PTSerif") format("svg"); /* Legacy iOS */
+}
+/* pt-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-v17-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/pt-sans-v17-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/pt-sans-v17-latin-regular.woff2") format("woff2"), url("../fonts/pt-sans-v17-latin-regular.woff") format("woff"), url("../fonts/pt-sans-v17-latin-regular.ttf") format("truetype"), url("../fonts/pt-sans-v17-latin-regular.svg#PTSans") format("svg"); /* Legacy iOS */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/hanken-grotesk-v8-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/hanken-grotesk-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/hanken-grotesk-v8-latin-regular.woff2") format("woff2"), url("../fonts/hanken-grotesk-v8-latin-regular.woff") format("woff"), url("../fonts/hanken-grotesk-v8-latin-regular.ttf") format("truetype"), url("../fonts/hanken-grotesk-v8-latin-regular.svg#HankenGrotesk") format("svg"); /* Legacy iOS */
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  color: #171717;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: #5a5a5a;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+[class*=col] {
+  flex-grow: 1;
+}
+
+.col-1 {
+  width: calc(100% - 30px);
+}
+
+.col-2 {
+  width: calc(50% - 30px);
+}
+
+.col-3 {
+  width: calc(33.3333333333% - 30px);
+}
+
+.menu__link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #171717;
+}
+.menu__link:hover {
+  color: #c9a96e;
+}
+
+.info {
+  font-size: 14px;
+  color: #666;
+}
+.info__author span {
+  color: #b4b4b4;
+}
+
+.hero {
+  background: url("../img/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  z-index: 8;
+}
+.hero .wrapper {
+  position: relative;
+  z-index: 9;
+  padding-bottom: 60px;
+}
+.hero__insert {
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.hero .info {
+  color: inherit;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.blog__content {
+  margin-bottom: 60px;
+}
+
+.author__name {
+  font-size: 16px;
+  font-weight: 700;
+}
+.author__prof {
+  font-size: 14px;
+  font-style: italic;
+  color: #b1b1b1;
+}
+
+.post {
+  transition: 0.3s all linear;
+  box-shadow: 0px 3px 5px #e5e5e5;
+}
+.post__image {
+  display: block;
+}
+.post__title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #c9a96e;
+}
+.post__text {
+  font-size: 20px;
+  line-height: 28px;
+}
+.post__description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+}
+.post__bottom {
+  border-top: 1px solid #e5e5e5;
+}
+.post__bottom p {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #c9a96e;
+}
+.post:hover {
+  box-shadow: 0px 2px 6px #000;
+}
+
+.pages {
+  border: 1px solid #e5e5e5;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+.pages__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.pages__btn svg {
+  width: 20px;
+  height: 30px;
+  opacity: 0.4;
+  margin-bottom: 1px;
+}
+.pages__btn span {
+  text-transform: uppercase;
+}
+.pages__btn_active {
+  color: #a2a2a2;
+}
+.pages__btn:hover {
+  color: #a2a2a2;
+}
+.pages__link {
+  font-size: 16px;
+}
+.pages__link:hover {
+  color: #a2a2a2;
+}
+
+.sidebar__title {
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #e5e5e5;
+}
+.sidebar .post__text {
+  font-size: 18px;
+}
+
+.categories__item:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+}
+.categories__link {
+  color: #666;
+  font-size: 14px;
+}
+.categories__link:hover {
+  color: #a2a2a2;
+}
+
+.social-media__item {
+  width: calc(33.3333333333% - 3px);
+  flex-grow: 1;
+}
+.social-media__link {
+  width: 100%;
+  background: #f8f9fa;
+  transition: 0.3s all linear;
+}
+.social-media__link:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 2px 6px #000;
+}
+.social-media__img {
+  fill: yellow;
+}
+.social-media span {
+  font-family: "PT Sans", sans-serif;
+  font-size: 12px;
+  color: #999;
+}
+
+.tags__link {
+  background: #f8f9fa;
+  font-size: 14px;
+  color: #666;
+  transition: 0.3s all linear;
+}
+.tags__link:hover {
+  color: #171717;
+  background-color: #c9a96e;
+}
+
+.insta-widget {
+  max-width: 1910px;
+  width: 100%;
+  margin: 0 auto 100px auto;
+  padding: 0 15px;
+}
+.insta-widget__title {
+  font-size: 24px;
+  font-weight: 400;
+}
+.insta-widget__title a:hover {
+  color: #c9a96e;
+}
+.insta-widget__post {
+  width: calc(16.6666666667% - 20px);
+  flex-grow: 1;
+}
+.insta-widget__post img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.insta-widget__link {
+  transition: 0.3s all linear;
+}
+.insta-widget__link:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 2px 6px #000;
+}
+
+.social__link {
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+}
+.social__link:hover {
+  background-color: #c9a96e;
+}
+.social__link:hover svg {
+  fill: #fff;
+}
+
+.footer__content {
+  border-bottom: 1px solid #e5e5e5;
+}
+.footer__copy {
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
+  color: #666;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,318 @@
+@import "fonts";
+@import "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  color: $dark-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: $third-text-color;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+[class*="col"] {
+  flex-grow: 1;
+}
+
+.col-1 {
+  width: calc(100% - 30px);
+}
+
+.col-2 {
+  width: calc(100% / 2 - 30px);
+}
+
+.col-3 {
+  width: calc(100% / 3 - 30px);
+}
+
+.menu {
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.info {
+  font-size: 14px;
+  color: $text-color;
+  &__author {
+    span {
+      color: $secondary-color;
+    }
+  }
+}
+
+.hero {
+  background: url("../img/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $light-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+    z-index: 8;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 9;
+    padding-bottom: 60px;
+  }
+
+  &__insert {
+    text-transform: uppercase;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .info {
+    color: inherit;
+  }
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.blog {
+  &__content {
+    margin-bottom: 60px;
+  }
+}
+
+.author {
+  &__name {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &__prof {
+    font-size: 14px;
+    font-style: italic;
+    color: #b1b1b1;
+  }
+}
+
+.post {
+  transition: 0.3s all linear;
+  box-shadow: 0px 3px 5px $additional-color;
+  &__image {
+    display: block;
+  }
+  &__title {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &__description {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: $text-color;
+  }
+
+  &__bottom {
+    border-top: 1px solid $additional-color;
+    p {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $primary-color;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 6px #000;
+  }
+}
+
+.pages {
+  border: 1px solid $additional-color;
+  font-family: "Hanken Grotesk", sans-serif;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    svg {
+      width: 20px;
+      height: 30px;
+      opacity: 0.4;
+      margin-bottom: 1px;
+    }
+    span {
+      text-transform: uppercase;
+    }
+    &_active {
+      color: $dark-light-color;
+    }
+    &:hover {
+      color: $dark-light-color;
+    }
+  }
+  &__link {
+    font-size: 16px;
+    &:hover {
+      color: $dark-light-color;
+    }
+  }
+}
+
+.sidebar {
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid $additional-color;
+  }
+
+  .post__text {
+    font-size: 18px;
+  }
+}
+
+.categories {
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $additional-color;
+  }
+
+  &__link {
+    color: $text-color;
+    font-size: 14px;
+    &:hover {
+      color: $dark-light-color;
+    }
+  }
+}
+
+.social-media {
+  &__item {
+    width: calc(100% / 3 - 3px);
+    flex-grow: 1;
+  }
+  &__link {
+    width: 100%;
+    background: #f8f9fa;
+    transition: 0.3s all linear;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 2px 6px #000;
+    }
+  }
+  &__img {
+    fill: yellow;
+  }
+  span {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: #999;
+  }
+}
+
+.tags {
+  &__link {
+    background: #f8f9fa;
+    font-size: 14px;
+    color: $text-color;
+    transition: 0.3s all linear;
+    &:hover {
+      color: $dark-color;
+      background-color: $primary-color;
+    }
+  }
+}
+
+.insta-widget {
+  max-width: 1910px;
+  width: 100%;
+  margin: 0 auto 100px auto;
+  padding: 0 15px;
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    a:hover {
+      color: $primary-color;
+    }
+  }
+  &__post {
+    width: calc(100% / 6 - 20px);
+    flex-grow: 1;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__link {
+    transition: 0.3s all linear;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 2px 6px #000;
+    }
+  }
+}
+
+.social {
+  &__link {
+    border: 1px solid $additional-color;
+    border-radius: 50%;
+    &:hover {
+      background-color: $primary-color;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.footer {
+  &__content {
+    border-bottom: 1px solid $additional-color;
+  }
+  &__copy {
+    font-size: 14px;
+    font-family: "PT Sans", sans-serif;
+    color: $text-color;
+  }
+}
